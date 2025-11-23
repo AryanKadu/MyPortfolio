@@ -31,26 +31,26 @@ export function SkillsSection() {
             return (
               <Card
                 key={index}
-                className="p-6 hover-elevate transition-all duration-300"
+                className="p-8 hover-elevate transition-all duration-300 border-2 hover:border-primary/30"
                 data-testid={`card-skill-category-${index}`}
               >
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
+                <div className="space-y-5">
+                  <div className="flex items-center gap-4">
                     {Icon && (
-                      <div className="p-2 rounded-lg bg-primary/10">
-                        <Icon className="h-5 w-5 text-primary" />
+                      <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 shadow-md">
+                        <Icon className="h-6 w-6 text-primary" />
                       </div>
                     )}
                     <h3 className="text-xl font-semibold text-foreground">
                       {category.category}
                     </h3>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2.5 pt-2">
                     {category.items.map((skill, skillIndex) => (
                       <Badge
                         key={skillIndex}
                         variant="secondary"
-                        className="px-3 py-1 hover-elevate"
+                        className="px-3 py-1.5 text-sm hover:bg-primary/10 hover:border-primary/30 transition-colors"
                         data-testid={`badge-skill-${index}-${skillIndex}`}
                       >
                         {skill}

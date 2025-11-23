@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { portfolioData } from "@shared/schema";
 import { Briefcase, CheckCircle2 } from "lucide-react";
 
@@ -37,25 +38,25 @@ export function ExperienceSection() {
                 </div>
 
                 <div className="md:w-1/2">
-                  <Card className="p-6 md:p-8 hover-elevate transition-all duration-300">
+                  <Card className="p-6 md:p-8 hover-elevate transition-all duration-300 border-l-4 border-l-primary shadow-lg">
                     <div className="flex flex-col md:flex-row gap-6">
                       <div className="flex-shrink-0 md:hidden">
-                        <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center shadow-md">
                           <Briefcase className="h-8 w-8 text-primary" />
                         </div>
                       </div>
 
-                      <div className="flex-1 space-y-4">
+                      <div className="flex-1 space-y-5">
                         <div>
-                          <h3 className="text-xl font-semibold text-foreground">
+                          <h3 className="text-2xl font-semibold text-foreground">
                             {exp.role}
                           </h3>
-                          <p className="text-base text-muted-foreground mt-1">
+                          <p className="text-base font-medium text-muted-foreground mt-2">
                             {exp.company}
                           </p>
-                          <p className="text-sm text-muted-foreground mt-1">
+                          <Badge variant="outline" className="mt-2">
                             {exp.duration}
-                          </p>
+                          </Badge>
                         </div>
 
                         <ul className="space-y-2">

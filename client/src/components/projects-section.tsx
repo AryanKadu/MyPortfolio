@@ -25,40 +25,41 @@ export function ProjectsSection() {
               className="overflow-hidden hover-elevate transition-all duration-300 group"
               data-testid={`card-project-${project.id}`}
             >
-              <div className="relative h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                <div className="text-6xl font-bold text-primary/20">
+              <div className="relative h-56 bg-gradient-to-br from-primary/20 via-primary/10 to-primary/5 flex items-center justify-center overflow-hidden group-hover:from-primary/30 group-hover:via-primary/20 transition-all duration-300">
+                <div className="text-7xl font-bold text-primary/20 group-hover:text-primary/30 transition-all duration-300 relative z-10">
                   {project.title.charAt(0)}
                 </div>
                 {project.featured && (
                   <Badge
-                    className="absolute top-4 right-4 gap-1"
+                    className="absolute top-4 right-4 gap-1 shadow-lg"
                     data-testid={`badge-featured-${project.id}`}
                   >
                     <Star className="h-3 w-3 fill-current" />
                     Featured
                   </Badge>
                 )}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
-              <div className="p-6 space-y-4">
+              <div className="p-8 space-y-5">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                  <h3 className="text-2xl font-semibold text-foreground mb-3">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-3">
+                  <p className="text-base text-muted-foreground mb-4 leading-relaxed">
                     {project.description}
                   </p>
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {project.longDescription}
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 pt-2">
                   {project.techStack.map((tech, techIndex) => (
                     <Badge
                       key={techIndex}
                       variant="outline"
-                      className="text-xs"
+                      className="text-xs px-3 py-1 hover:bg-primary/10 hover:border-primary/50 transition-colors"
                       data-testid={`badge-tech-${project.id}-${techIndex}`}
                     >
                       {tech}
@@ -66,7 +67,7 @@ export function ProjectsSection() {
                   ))}
                 </div>
 
-                <div className="flex gap-3 pt-2">
+                <div className="flex gap-3 pt-4 border-t">
                   {project.githubUrl ? (
                     <Button
                       variant="outline"
@@ -80,7 +81,7 @@ export function ProjectsSection() {
                         rel="noopener noreferrer"
                       >
                         <Github className="mr-2 h-4 w-4" />
-                        GitHub
+                        Private Repo
                       </a>
                     </Button>
                   ) : (
@@ -94,7 +95,7 @@ export function ProjectsSection() {
                       Private Repo
                     </Button>
                   )}
-                  {project.demoUrl ? (
+                  {project.demoUrl && (
                     <Button
                       size="sm"
                       asChild
@@ -108,15 +109,6 @@ export function ProjectsSection() {
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Live Demo
                       </a>
-                    </Button>
-                  ) : (
-                    <Button
-                      size="sm"
-                      disabled
-                      data-testid={`button-demo-${project.id}`}
-                    >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Coming Soon
                     </Button>
                   )}
                 </div>

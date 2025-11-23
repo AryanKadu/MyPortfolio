@@ -18,8 +18,8 @@ export function HeroSection() {
       id="home"
       className="min-h-screen flex items-center justify-center px-6 pt-20"
     >
-      <div className="max-w-4xl mx-auto text-center space-y-8">
-        <div className="space-y-4">
+      <div className="max-w-4xl mx-auto text-center space-y-10">
+        <div className="space-y-6">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight">
             <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
               {hero.name}
@@ -28,12 +28,12 @@ export function HeroSection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-foreground">
             {hero.role}
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             {hero.tagline}
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+        <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
           <Button
             size="lg"
             onClick={scrollToProjects}

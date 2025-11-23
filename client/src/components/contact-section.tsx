@@ -65,11 +65,11 @@ export function ContactSection() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-6">
-            <Card className="p-6 hover-elevate" data-testid="card-contact-info">
+            <Card className="p-8 hover-elevate transition-all duration-300" data-testid="card-contact-info">
               <h3 className="text-xl font-semibold text-foreground mb-6">
                 Contact Information
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-5">
                 <div className="flex items-center gap-4">
                   <div className="p-2 rounded-lg bg-primary/10">
                     <Mail className="h-5 w-5 text-primary" />
@@ -114,11 +114,11 @@ export function ContactSection() {
               </div>
             </Card>
 
-            <Card className="p-6 hover-elevate" data-testid="card-social-links">
+            <Card className="p-8 hover-elevate transition-all duration-300" data-testid="card-social-links">
               <h3 className="text-xl font-semibold text-foreground mb-6">
                 Connect With Me
               </h3>
-              <div className="flex gap-3">
+              <div className="flex gap-4">
                 {contact.social.github && (
                   <Button
                     variant="outline"
@@ -155,12 +155,12 @@ export function ContactSection() {
             </Card>
           </div>
 
-          <Card className="p-6" data-testid="card-contact-form">
+          <Card className="p-8 hover-elevate transition-all duration-300" data-testid="card-contact-form">
             <h3 className="text-xl font-semibold text-foreground mb-6">
               Send a Message
             </h3>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
                 <FormField
                   control={form.control}
                   name="name"

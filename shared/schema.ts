@@ -71,10 +71,8 @@ export const portfolioData: PortfolioData = {
     resumeUrl: "/attached_assets/Resume_AryanKadu_1763902239404.pdf",
   },
   about: {
-    bio: "Third-year Computer Engineering undergraduate at PICT with a strong academic record (CGPA: 9.67). I have hands-on experience building responsive and scalable web applications as a full-stack developer. I enjoy exploring new technologies and using code to solve real-world problems.",
+    bio: "I'm a third-year Computer Engineering student at PICT with a strong academic record (CGPA: 9.67) and hands-on experience building full-stack web applications. I enjoy working on real-world projects, especially those involving secure payments, cloud integrations, and AI-powered features.\n\nI've developed two major full-stack platforms, including a scalable e-commerce system and an AI-driven fitness application. These projects strengthened my skills in backend development, API design, debugging, and building responsive user interfaces.\n\nI frequently use AI tools in my workflow to build faster, explore new technologies, and solve problems more efficiently. I'm always looking to improve, learn, and create practical solutions that make an impact.",
     stats: [
-      { label: "Years of Experience", value: "2+" },
-      { label: "Projects Completed", value: "5+" },
       { label: "CGPA", value: "9.67" },
     ],
   },
@@ -104,6 +102,8 @@ export const portfolioData: PortfolioData = {
       longDescription: "Developed a comprehensive e-commerce platform featuring secure authentication, product browsing, Razorpay payment integration, and a powerful admin dashboard for managing users, products, and orders.",
       techStack: ["Node.js", "Express", "MongoDB", "React", "Razorpay", "Cloudinary"],
       featured: true,
+      githubUrl: "https://github.com/AryanKadu/MansoonG",
+      demoUrl: "https://mansoong.onrender.com/home",
     },
     {
       id: "strideup",
@@ -112,6 +112,8 @@ export const portfolioData: PortfolioData = {
       longDescription: "Built a comprehensive gym management system with AI-powered personalized workout plans and diet recommendations, featuring member management, attendance tracking, and performance analytics.",
       techStack: ["Django", "Flask", "ML Models", "HTML/CSS", "JavaScript"],
       featured: true,
+      githubUrl: "https://github.com/AryanKadu/Stride_Up",
+      demoUrl: "https://strideup.onrender.com/",
     },
   ],
   experience: [
@@ -134,7 +136,7 @@ export const portfolioData: PortfolioData = {
     location: "Pune, India",
     social: {
       github: "AryanKadu",
-      linkedin: "AryanKadu",
+      linkedin: "aryan-kadu-648369295",
     },
   },
   education: [
